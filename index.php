@@ -1,6 +1,11 @@
 <?php
+/**
+ * 主要
+ * User: CrossJae
+ * Date: 2017/11/15
+ */
+
   // 引入数据库信息
-  require_once('connectvars.php');
   require_once('connect.php');
 
   $episode = $_POST['episode']; // 获取表格的集数
