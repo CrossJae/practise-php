@@ -1,0 +1,6 @@
+connectvars.php
+
+node_modules
+npm-debug.log
+*.DS_Store
+build
