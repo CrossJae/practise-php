@@ -4,6 +4,9 @@
  * User: CrossJae
  * Date: 2017/11/16
  */
+  // header
+  require_once('header.php');
+
   require_once('connect.php');
 
   $del_id = $_GET['id'];

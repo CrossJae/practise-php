@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>comic-conan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <link rel="stylesheet" href="dist/bootstrap.min.css" />
+    <link rel="stylesheet" href="dist/my.css" />
   </head>
   <body>
     <form class="" action="index.php" method="post">
-      <p>集数：<input type="text" name="episode" value="" /></p>
-      <p>名字：<input type="text" name="name" value="" /></p>
-      <p>描述：<input type="text" name="des" value="" /></p>
-      <p>标签：<input type="text" name="tag" value="" /></p>
-      <p><input type="submit" name="addData" value="添加" /></p>
-      <p><input type="submit" name="viewData" value="查看" /></p>
+      <p>集数：<input type="text" name="episode" class="form-control" value="" /></p>
+      <p>名字：<input type="text" name="name" class="form-control" value="" /></p>
+      <p>描述：<input type="text" name="des" class="form-control" value="" /></p>
+      <p>标签：<input type="text" name="tag" class="form-control" value="" /></p>
+      <p><input type="submit" name="addData" value="添加" class="btn btn-default" /></p>
+      <p><input type="submit" name="viewData" value="查看" class="btn btn-default" /></p>
     </form>
   </body>
 </html>

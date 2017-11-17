@@ -31,24 +31,28 @@
 ?>
 
 <!-- search module s -->
-<form action="index.php" method="post">
-  <input type="text" name="search_text" value="" />
-  <select class="" name="select_tag">
-    <option value="0">无</option>
-  <?php
-    $tag_data = mysqli_query($dbc, $tag_query)
-      or die('error tagdata');
-    while($tag_row = mysqli_fetch_array($tag_data)){
-      echo '<option value="' . $tag_row['tag_id'] . '">' . $tag_row['name'] . '</option>';
-    }
-  ?>
-  </select>
-  <input type="submit" value="搜索" />
+<form action="index.php" method="post" class="form-inline">
+  <div class="form-group">
+    <input type="text" name="search_text" value=""  class="form-control" />
+  </div>
+  <div class="form-group">
+    <select class="form-control" name="select_tag">
+      <option value="0">无</option>
+    <?php
+      $tag_data = mysqli_query($dbc, $tag_query)
+        or die('error tagdata');
+      while($tag_row = mysqli_fetch_array($tag_data)){
+        echo '<option value="' . $tag_row['tag_id'] . '">' . $tag_row['name'] . '</option>';
+      }
+    ?>
+    </select>
+  </div>
+  <input type="submit" value="搜索" class="btn btn-default" />
 </form>
 <!-- search module e -->
 
 <!-- table module s -->
-<table>
+<table class="table table-striped table-hover table-responsive table-bordered">
   <tbody>
     <tr>
       <td>集数</td>
@@ -83,7 +87,7 @@
         }
         // add tag end
 
-        echo '<td><a href="del.php?id=' . $row['episode'] . '">del</a></td>' .
+        echo '<td><a href="del.php?id=' . $row['episode'] . '" class="btn btn-warning">del</a></td>' .
           '</tr>';
       }
     ?>

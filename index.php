@@ -1,10 +1,12 @@
+
 <?php
 /**
  * 主要
  * User: CrossJae
  * Date: 2017/11/15
  */
-
+  // header
+  require_once('header.php');
   // 引入数据库信息
   require_once('connect.php');
 
