@@ -5,5 +5,7 @@
  * Date: 2017/11/15
  */
 
-  echo 'test';
+  echo $_POST['select_tag'];
+
+
 ?>
