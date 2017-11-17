@@ -15,11 +15,11 @@
         " or des like '%" . $_POST['search_text'] . "%'" ;
     }else{
       // 有标签
-      $query = "select * from " . DB_TABLE . " where tag_id=" . $_POST['select_tag'] .
-
-      " and name like '%" . $_POST['search_text'] . "%'" .
-      " or des like '%" . $_POST['search_text'] . "%'" .
-      " or episode='" . $_POST['search_text'] . "'" ;
+      // select * from conan  where tag_id=4 and ( episode like '%4%' or des like '%4%');
+      $query = "select * from " . DB_TABLE . " where tag_id=" . $_POST['select_tag'] . " and ( " .
+      " episode='" . $_POST['search_text'] . "'" .
+      " or name like '%" . $_POST['search_text'] . "%'" .
+      " or des like '%" . $_POST['search_text'] . "%'" . " )" ;
     }
   }else{
     $query = "select * from " . DB_TABLE;
